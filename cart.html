@@ -24,15 +24,15 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <button type="button" class="action-btn" aria-label="Tài khoản">
+                <a href="login.html" class="action-btn" aria-label="Tài khoản">
                     <span>Account</span>
-                </button>
+                </a>
                 <button type="button" class="action-btn" aria-label="Tìm kiếm">
                     <span>Search</span>
                 </button>
-                <button type="button" class="action-btn" aria-label="Giỏ hàng">
+                <a href="cart.html" class="action-btn" aria-label="Giỏ hàng">
                     <span>Cart</span>
-                </button>
+                </a>
             </div>
         </div>
     </header>
@@ -43,77 +43,10 @@
                 <div class="cart-items">
                     <header class="cart-header">
                         <h1 id="cart-heading">Giỏ hàng</h1>
-                        <p>3 sản phẩm</p>
+                        <p class="cart-count">0 sản phẩm</p>
                     </header>
-                    <ul class="cart-list">
-                        <li class="cart-item">
-                            <div class="cart-thumb" role="img" aria-label="Áo thun nam tay ngắn"></div>
-                            <div class="cart-info">
-                                <h2 class="cart-item-name">Áo Thun - AT - TF - R1510 BD451</h2>
-                                <ul class="cart-meta" aria-label="Thông tin sản phẩm">
-                                    <li>M</li>
-                                    <li>Xanh Z032</li>
-                                    <li>Đến 2301</li>
-                                </ul>
-                                <div class="cart-controls">
-                                    <div class="quantity-control" aria-label="Chọn số lượng cho Áo Thun">
-                                        <button type="button" aria-label="Giảm số lượng">−</button>
-                                        <input type="number" min="1" value="1" aria-label="Số lượng Áo Thun" />
-                                        <button type="button" aria-label="Tăng số lượng">+</button>
-                                    </div>
-                                    <button type="button" class="link-action">Lưu vào yêu thích</button>
-                                    <button type="button" class="link-action">Xóa</button>
-                                </div>
-                            </div>
-                            <div class="cart-price">
-                                <span>110,186₫</span>
-                            </div>
-                        </li>
-                        <li class="cart-item">
-                            <div class="cart-thumb" role="img" aria-label="Quần kaki nam"></div>
-                            <div class="cart-info">
-                                <h2 class="cart-item-name">Quần Kaki - QK - SL2130 BD115</h2>
-                                <ul class="cart-meta" aria-label="Thông tin sản phẩm">
-                                    <li>L</li>
-                                    <li>Đen 2302</li>
-                                </ul>
-                                <div class="cart-controls">
-                                    <div class="quantity-control" aria-label="Chọn số lượng cho Quần Kaki">
-                                        <button type="button" aria-label="Giảm số lượng">−</button>
-                                        <input type="number" min="1" value="1" aria-label="Số lượng Quần Kaki" />
-                                        <button type="button" aria-label="Tăng số lượng">+</button>
-                                    </div>
-                                    <button type="button" class="link-action">Lưu vào yêu thích</button>
-                                    <button type="button" class="link-action">Xóa</button>
-                                </div>
-                            </div>
-                            <div class="cart-price">
-                                <span>454,167₫</span>
-                            </div>
-                        </li>
-                        <li class="cart-item">
-                            <div class="cart-thumb" role="img" aria-label="Quần jogger nam"></div>
-                            <div class="cart-info">
-                                <h2 class="cart-item-name">Quần Jog - QJY - STR2120 BE293</h2>
-                                <ul class="cart-meta" aria-label="Thông tin sản phẩm">
-                                    <li>29</li>
-                                    <li>Black</li>
-                                </ul>
-                                <div class="cart-controls">
-                                    <div class="quantity-control" aria-label="Chọn số lượng cho Quần Jog">
-                                        <button type="button" aria-label="Giảm số lượng">−</button>
-                                        <input type="number" min="1" value="1" aria-label="Số lượng Quần Jog" />
-                                        <button type="button" aria-label="Tăng số lượng">+</button>
-                                    </div>
-                                    <button type="button" class="link-action">Lưu vào yêu thích</button>
-                                    <button type="button" class="link-action">Xóa</button>
-                                </div>
-                            </div>
-                            <div class="cart-price">
-                                <span>437,500₫</span>
-                            </div>
-                        </li>
-                    </ul>
+                    <ul class="cart-list"></ul>
+                    <p class="cart-empty-state" role="status" hidden>Giỏ hàng của bạn đang trống.</p>
                     <div class="cart-note">
                         <label for="order-note">Ghi chú đơn hàng</label>
                         <textarea id="order-note" rows="3" placeholder="Nhập lời nhắn cho cửa hàng..."></textarea>
@@ -129,7 +62,7 @@
                         <dl class="summary-totals">
                             <div class="summary-row">
                                 <dt>Tạm tính</dt>
-                                <dd>1,001,853₫</dd>
+                                <dd class="summary-subtotal">0₫</dd>
                             </div>
                             <div class="summary-row">
                                 <dt>Giảm giá</dt>
@@ -138,10 +71,10 @@
                             <div class="summary-divider" role="presentation"></div>
                             <div class="summary-row total">
                                 <dt>Tổng cộng</dt>
-                                <dd>1,001,853₫</dd>
+                                <dd class="summary-total">0₫</dd>
                             </div>
                         </dl>
-                        <button type="button" class="checkout-btn">Thanh toán</button>
+                        <button type="button" class="checkout-btn" disabled>Thanh toán</button>
                     </div>
                 </aside>
             </div>
@@ -199,5 +132,153 @@
         </div>
         <p class="footer-note">© 2025 Fashion Avenue. All rights reserved.</p>
     </footer>
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (!window.cartUtils) {
+                return;
+            }
+
+            const cartList = document.querySelector('.cart-list');
+            const cartCount = document.querySelector('.cart-count');
+            const cartEmptyState = document.querySelector('.cart-empty-state');
+            const subtotalEl = document.querySelector('.summary-subtotal');
+            const totalEl = document.querySelector('.summary-total');
+            const checkoutBtn = document.querySelector('.checkout-btn');
+
+            function clampQuantity(value) {
+                return Math.max(1, Number.parseInt(value, 10) || 1);
+            }
+
+            function updateSummary(items) {
+                const totals = window.cartUtils.getCartTotals(items);
+                if (cartCount) {
+                    cartCount.textContent = `${totals.itemCount} sản phẩm`;
+                }
+
+                if (subtotalEl) {
+                    subtotalEl.textContent = window.cartUtils.formatCurrency(totals.subtotal);
+                }
+
+                if (totalEl) {
+                    totalEl.textContent = window.cartUtils.formatCurrency(totals.subtotal);
+                }
+
+                if (checkoutBtn) {
+                    checkoutBtn.disabled = totals.itemCount === 0;
+                }
+            }
+
+            function createCartItemElement(item) {
+                const li = document.createElement('li');
+                li.className = 'cart-item';
+                li.dataset.id = item.id;
+                li.dataset.size = item.size;
+                li.dataset.color = item.color;
+
+                li.innerHTML = `
+                    <div class="cart-thumb" role="img" aria-label="${item.name}"></div>
+                    <div class="cart-info">
+                        <h2 class="cart-item-name">${item.name}</h2>
+                        <ul class="cart-meta" aria-label="Thông tin sản phẩm">
+                            <li>${item.size}</li>
+                            <li>${item.color}</li>
+                            <li>${item.id}</li>
+                        </ul>
+                        <div class="cart-controls">
+                            <div class="quantity-control" aria-label="Chọn số lượng cho ${item.name}">
+                                <button type="button" aria-label="Giảm số lượng">−</button>
+                                <input type="number" min="1" value="${item.quantity}" aria-label="Số lượng ${item.name}" />
+                                <button type="button" aria-label="Tăng số lượng">+</button>
+                            </div>
+                            <button type="button" class="link-action link-action-wishlist">Lưu vào yêu thích</button>
+                            <button type="button" class="link-action link-action-remove">Xóa</button>
+                        </div>
+                    </div>
+                    <div class="cart-price">
+                        <span>${window.cartUtils.formatCurrency(item.unitPrice * item.quantity)}</span>
+                    </div>
+                `;
+
+                attachCartItemEvents(li, item);
+                return li;
+            }
+
+            function attachCartItemEvents(element, item) {
+                const quantityControl = element.querySelector('.quantity-control');
+                const removeBtn = element.querySelector('.link-action-remove');
+                const priceEl = element.querySelector('.cart-price span');
+
+                if (!quantityControl || !removeBtn || !priceEl) {
+                    return;
+                }
+
+                const decrementBtn = quantityControl.querySelector('button:first-of-type');
+                const incrementBtn = quantityControl.querySelector('button:last-of-type');
+                const quantityInput = quantityControl.querySelector('input');
+
+                if (!decrementBtn || !incrementBtn || !quantityInput) {
+                    return;
+                }
+
+                function refresh(quantity) {
+                    const safeQuantity = clampQuantity(quantity);
+                    if (safeQuantity === item.quantity) {
+                        quantityInput.value = safeQuantity;
+                        return;
+                    }
+
+                    quantityInput.value = safeQuantity;
+                    const items = window.cartUtils.updateItemQuantity(item.id, item.size, item.color, safeQuantity);
+                    item.quantity = safeQuantity;
+                    priceEl.textContent = window.cartUtils.formatCurrency(item.unitPrice * item.quantity);
+                    updateSummary(items);
+                }
+
+                decrementBtn.addEventListener('click', () => {
+                    refresh(Number(quantityInput.value) - 1);
+                });
+
+                incrementBtn.addEventListener('click', () => {
+                    refresh(Number(quantityInput.value) + 1);
+                });
+
+                quantityInput.addEventListener('change', () => {
+                    refresh(quantityInput.value);
+                });
+
+                removeBtn.addEventListener('click', () => {
+                    window.cartUtils.removeItem(item.id, item.size, item.color);
+                    renderCart();
+                });
+            }
+
+            function renderCart() {
+                const items = window.cartUtils.getCartItems();
+                if (cartList) {
+                    cartList.innerHTML = '';
+
+                    if (items.length === 0) {
+                        if (cartEmptyState) {
+                            cartEmptyState.hidden = false;
+                        }
+                    } else {
+                        if (cartEmptyState) {
+                            cartEmptyState.hidden = true;
+                        }
+
+                        items.forEach((item) => {
+                            const element = createCartItemElement(item);
+                            cartList.appendChild(element);
+                        });
+                    }
+                }
+
+                updateSummary(items);
+            }
+
+            renderCart();
+        });
+    </script>
 </body>
 </html>
