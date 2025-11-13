@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng | Fashion Avenue</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo" aria-label="Fashion Avenue logo">Fashion Avenue</div>
+            <nav class="site-nav" aria-label="Danh mục sản phẩm">
+                <ul>
+                    <li><a href="index.html">New Arrivals</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button type="button" class="action-btn" aria-label="Tài khoản">
+                    <span>Account</span>
+                </button>
+                <button type="button" class="action-btn" aria-label="Tìm kiếm">
+                    <span>Search</span>
+                </button>
+                <button type="button" class="action-btn" aria-label="Giỏ hàng">
+                    <span>Cart</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <section class="cart-page" aria-labelledby="cart-heading">
+            <div class="cart-layout">
+                <div class="cart-items">
+                    <header class="cart-header">
+                        <h1 id="cart-heading">Giỏ hàng</h1>
+                        <p>3 sản phẩm</p>
+                    </header>
+                    <ul class="cart-list">
+                        <li class="cart-item">
+                            <div class="cart-thumb" role="img" aria-label="Áo thun nam tay ngắn"></div>
+                            <div class="cart-info">
+                                <h2 class="cart-item-name">Áo Thun - AT - TF - R1510 BD451</h2>
+                                <ul class="cart-meta" aria-label="Thông tin sản phẩm">
+                                    <li>M</li>
+                                    <li>Xanh Z032</li>
+                                    <li>Đến 2301</li>
+                                </ul>
+                                <div class="cart-controls">
+                                    <div class="quantity-control" aria-label="Chọn số lượng cho Áo Thun">
+                                        <button type="button" aria-label="Giảm số lượng">−</button>
+                                        <input type="number" min="1" value="1" aria-label="Số lượng Áo Thun" />
+                                        <button type="button" aria-label="Tăng số lượng">+</button>
+                                    </div>
+                                    <button type="button" class="link-action">Lưu vào yêu thích</button>
+                                    <button type="button" class="link-action">Xóa</button>
+                                </div>
+                            </div>
+                            <div class="cart-price">
+                                <span>110,186₫</span>
+                            </div>
+                        </li>
+                        <li class="cart-item">
+                            <div class="cart-thumb" role="img" aria-label="Quần kaki nam"></div>
+                            <div class="cart-info">
+                                <h2 class="cart-item-name">Quần Kaki - QK - SL2130 BD115</h2>
+                                <ul class="cart-meta" aria-label="Thông tin sản phẩm">
+                                    <li>L</li>
+                                    <li>Đen 2302</li>
+                                </ul>
+                                <div class="cart-controls">
+                                    <div class="quantity-control" aria-label="Chọn số lượng cho Quần Kaki">
+                                        <button type="button" aria-label="Giảm số lượng">−</button>
+                                        <input type="number" min="1" value="1" aria-label="Số lượng Quần Kaki" />
+                                        <button type="button" aria-label="Tăng số lượng">+</button>
+                                    </div>
+                                    <button type="button" class="link-action">Lưu vào yêu thích</button>
+                                    <button type="button" class="link-action">Xóa</button>
+                                </div>
+                            </div>
+                            <div class="cart-price">
+                                <span>454,167₫</span>
+                            </div>
+                        </li>
+                        <li class="cart-item">
+                            <div class="cart-thumb" role="img" aria-label="Quần jogger nam"></div>
+                            <div class="cart-info">
+                                <h2 class="cart-item-name">Quần Jog - QJY - STR2120 BE293</h2>
+                                <ul class="cart-meta" aria-label="Thông tin sản phẩm">
+                                    <li>29</li>
+                                    <li>Black</li>
+                                </ul>
+                                <div class="cart-controls">
+                                    <div class="quantity-control" aria-label="Chọn số lượng cho Quần Jog">
+                                        <button type="button" aria-label="Giảm số lượng">−</button>
+                                        <input type="number" min="1" value="1" aria-label="Số lượng Quần Jog" />
+                                        <button type="button" aria-label="Tăng số lượng">+</button>
+                                    </div>
+                                    <button type="button" class="link-action">Lưu vào yêu thích</button>
+                                    <button type="button" class="link-action">Xóa</button>
+                                </div>
+                            </div>
+                            <div class="cart-price">
+                                <span>437,500₫</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="cart-note">
+                        <label for="order-note">Ghi chú đơn hàng</label>
+                        <textarea id="order-note" rows="3" placeholder="Nhập lời nhắn cho cửa hàng..."></textarea>
+                    </div>
+                </div>
+                <aside class="cart-summary" aria-labelledby="summary-heading">
+                    <div class="summary-card">
+                        <h2 id="summary-heading">Tóm tắt đơn hàng</h2>
+                        <label class="summary-option">
+                            <input type="checkbox" />
+                            <span>Xuất hóa đơn công ty</span>
+                        </label>
+                        <dl class="summary-totals">
+                            <div class="summary-row">
+                                <dt>Tạm tính</dt>
+                                <dd>1,001,853₫</dd>
+                            </div>
+                            <div class="summary-row">
+                                <dt>Giảm giá</dt>
+                                <dd>0₫</dd>
+                            </div>
+                            <div class="summary-divider" role="presentation"></div>
+                            <div class="summary-row total">
+                                <dt>Tổng cộng</dt>
+                                <dd>1,001,853₫</dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="checkout-btn">Thanh toán</button>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="recommended" aria-labelledby="recommended-heading">
+            <header class="section-header">
+                <h2 id="recommended-heading">Có thể bạn sẽ thích</h2>
+            </header>
+            <div class="recommended-grid" role="list">
+                <article class="recommended-card highlight" role="listitem">
+                    <div class="recommended-thumb"></div>
+                    <div class="recommended-badges">
+                        <span class="badge badge-special">Special Price</span>
+                        <span class="badge badge-equal">Hàng đồng giá</span>
+                    </div>
+                    <h3>Quần Thun - QTH - RE2111</h3>
+                    <p class="recommended-sku">BD071</p>
+                    <p class="recommended-price">267,539₫</p>
+                </article>
+                <article class="recommended-card" role="listitem">
+                    <div class="recommended-thumb"></div>
+                    <h3>Quần Thun - QTY - LF2120</h3>
+                    <p class="recommended-sku">BD159</p>
+                    <p class="recommended-price">374,295₫</p>
+                </article>
+                <article class="recommended-card" role="listitem">
+                    <div class="recommended-thumb"></div>
+                    <h3>Quần Kaki - QKX - SL2130</h3>
+                    <p class="recommended-sku">BD115</p>
+                    <p class="recommended-price">454,167₫</p>
+                </article>
+                <article class="recommended-card" role="listitem">
+                    <div class="recommended-thumb"></div>
+                    <h3>Quần Kaiki - QKJ - RE2130</h3>
+                    <p class="recommended-sku">BD015</p>
+                    <p class="recommended-price">479,167₫</p>
+                </article>
+                <article class="recommended-card" role="listitem">
+                    <div class="recommended-thumb"></div>
+                    <h3>Quần Jogger - QJ - RE2139</h3>
+                    <p class="recommended-sku">BD025</p>
+                    <p class="recommended-price">439,500₫</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>Fashion Avenue Co., Ltd</h2>
+            <p>Số điện thoại: <a href="tel:+84123456789">+84 123 456 789</a></p>
+            <p>Địa chỉ: 123 Đường Thời Trang, Quận 1, TP. Hồ Chí Minh</p>
+            <p>Email: <a href="mailto:contact@fashionavenue.vn">contact@fashionavenue.vn</a></p>
+        </div>
+        <p class="footer-note">© 2025 Fashion Avenue. All rights reserved.</p>
+    </footer>
+</body>
+</html>
