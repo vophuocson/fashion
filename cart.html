@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng | Fashion Avenue</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo" aria-label="Fashion Avenue logo">Fashion Avenue</div>
+            <nav class="site-nav" aria-label="Danh mục sản phẩm">
+                <ul>
+                    <li><a href="index.html">New Arrivals</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="action-btn" aria-label="Tài khoản">
+                    <span>Account</span>
+                </a>
+                <button type="button" class="action-btn" aria-label="Tìm kiếm">
+                    <span>Search</span>
+                </button>
+                <a href="cart.html" class="action-btn" aria-label="Giỏ hàng">
+                    <span>Cart</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <section class="cart-page" aria-labelledby="cart-heading">
+            <div class="cart-layout">
+                <div class="cart-items">
+                    <header class="cart-header">
+                        <h1 id="cart-heading">Giỏ hàng</h1>
+                        <p class="cart-count">0 sản phẩm</p>
+                    </header>
+                    <ul class="cart-list"></ul>
+                    <p class="cart-empty-state" role="status" hidden>Giỏ hàng của bạn đang trống.</p>
+                    <div class="cart-note">
+                        <label for="order-note">Ghi chú đơn hàng</label>
+                        <textarea id="order-note" rows="3" placeholder="Nhập lời nhắn cho cửa hàng..."></textarea>
+                    </div>
+                </div>
+                <aside class="cart-summary" aria-labelledby="summary-heading">
+                    <div class="summary-card">
+                        <h2 id="summary-heading">Tóm tắt đơn hàng</h2>
+                        <label class="summary-option">
+                            <input type="checkbox" />
+                            <span>Xuất hóa đơn công ty</span>
+                        </label>
+                        <dl class="summary-totals">
+                            <div class="summary-row">
+                                <dt>Tạm tính</dt>
+                                <dd class="summary-subtotal">0₫</dd>
+                            </div>
+                            <div class="summary-row">
+                                <dt>Giảm giá</dt>
+                                <dd>0₫</dd>
+                            </div>
+                            <div class="summary-divider" role="presentation"></div>
+                            <div class="summary-row total">
+                                <dt>Tổng cộng</dt>
+                                <dd class="summary-total">0₫</dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="checkout-btn" disabled>Thanh toán</button>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="recommended" aria-labelledby="recommended-heading">
+            <header class="section-header">
+                <h2 id="recommended-heading">Có thể bạn sẽ thích</h2>
+            </header>
+            <div class="recommended-grid" role="list">
+                <article class="recommended-card highlight" role="listitem">
+                    <div class="recommended-thumb"></div>
+                    <div class="recommended-badges">
+                        <span class="badge badge-special">Special Price</span>
+                        <span class="badge badge-equal">Hàng đồng giá</span>
+                    </div>
+                    <h3>Quần Thun - QTH - RE2111</h3>
+                    <p class="recommended-sku">BD071</p>
+                    <p class="recommended-price">267,539₫</p>
+                </article>
+                <article class="recommended-card" role="listitem">
+                    <div class="recommended-thumb"></div>
+                    <h3>Quần Thun - QTY - LF2120</h3>
+                    <p class="recommended-sku">BD159</p>
+                    <p class="recommended-price">374,295₫</p>
+                </article>
+                <article class="recommended-card" role="listitem">
+                    <div class="recommended-thumb"></div>
+                    <h3>Quần Kaki - QKX - SL2130</h3>
+                    <p class="recommended-sku">BD115</p>
+                    <p class="recommended-price">454,167₫</p>
+                </article>
+                <article class="recommended-card" role="listitem">
+                    <div class="recommended-thumb"></div>
+                    <h3>Quần Kaiki - QKJ - RE2130</h3>
+                    <p class="recommended-sku">BD015</p>
+                    <p class="recommended-price">479,167₫</p>
+                </article>
+                <article class="recommended-card" role="listitem">
+                    <div class="recommended-thumb"></div>
+                    <h3>Quần Jogger - QJ - RE2139</h3>
+                    <p class="recommended-sku">BD025</p>
+                    <p class="recommended-price">439,500₫</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>Fashion Avenue Co., Ltd</h2>
+            <p>Số điện thoại: <a href="tel:+84123456789">+84 123 456 789</a></p>
+            <p>Địa chỉ: 123 Đường Thời Trang, Quận 1, TP. Hồ Chí Minh</p>
+            <p>Email: <a href="mailto:contact@fashionavenue.vn">contact@fashionavenue.vn</a></p>
+        </div>
+        <p class="footer-note">© 2025 Fashion Avenue. All rights reserved.</p>
+    </footer>
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (!window.cartUtils) {
+                return;
+            }
+
+            const cartList = document.querySelector('.cart-list');
+            const cartCount = document.querySelector('.cart-count');
+            const cartEmptyState = document.querySelector('.cart-empty-state');
+            const subtotalEl = document.querySelector('.summary-subtotal');
+            const totalEl = document.querySelector('.summary-total');
+            const checkoutBtn = document.querySelector('.checkout-btn');
+
+            function clampQuantity(value) {
+                return Math.max(1, Number.parseInt(value, 10) || 1);
+            }
+
+            function updateSummary(items) {
+                const totals = window.cartUtils.getCartTotals(items);
+                if (cartCount) {
+                    cartCount.textContent = `${totals.itemCount} sản phẩm`;
+                }
+
+                if (subtotalEl) {
+                    subtotalEl.textContent = window.cartUtils.formatCurrency(totals.subtotal);
+                }
+
+                if (totalEl) {
+                    totalEl.textContent = window.cartUtils.formatCurrency(totals.subtotal);
+                }
+
+                if (checkoutBtn) {
+                    checkoutBtn.disabled = totals.itemCount === 0;
+                }
+            }
+
+            function createCartItemElement(item) {
+                const li = document.createElement('li');
+                li.className = 'cart-item';
+                li.dataset.id = item.id;
+                li.dataset.size = item.size;
+                li.dataset.color = item.color;
+
+                li.innerHTML = `
+                    <div class="cart-thumb" role="img" aria-label="${item.name}"></div>
+                    <div class="cart-info">
+                        <h2 class="cart-item-name">${item.name}</h2>
+                        <ul class="cart-meta" aria-label="Thông tin sản phẩm">
+                            <li>${item.size}</li>
+                            <li>${item.color}</li>
+                            <li>${item.id}</li>
+                        </ul>
+                        <div class="cart-controls">
+                            <div class="quantity-control" aria-label="Chọn số lượng cho ${item.name}">
+                                <button type="button" aria-label="Giảm số lượng">−</button>
+                                <input type="number" min="1" value="${item.quantity}" aria-label="Số lượng ${item.name}" />
+                                <button type="button" aria-label="Tăng số lượng">+</button>
+                            </div>
+                            <button type="button" class="link-action link-action-wishlist">Lưu vào yêu thích</button>
+                            <button type="button" class="link-action link-action-remove">Xóa</button>
+                        </div>
+                    </div>
+                    <div class="cart-price">
+                        <span>${window.cartUtils.formatCurrency(item.unitPrice * item.quantity)}</span>
+                    </div>
+                `;
+
+                attachCartItemEvents(li, item);
+                return li;
+            }
+
+            function attachCartItemEvents(element, item) {
+                const quantityControl = element.querySelector('.quantity-control');
+                const removeBtn = element.querySelector('.link-action-remove');
+                const priceEl = element.querySelector('.cart-price span');
+
+                if (!quantityControl || !removeBtn || !priceEl) {
+                    return;
+                }
+
+                const decrementBtn = quantityControl.querySelector('button:first-of-type');
+                const incrementBtn = quantityControl.querySelector('button:last-of-type');
+                const quantityInput = quantityControl.querySelector('input');
+
+                if (!decrementBtn || !incrementBtn || !quantityInput) {
+                    return;
+                }
+
+                function refresh(quantity) {
+                    const safeQuantity = clampQuantity(quantity);
+                    if (safeQuantity === item.quantity) {
+                        quantityInput.value = safeQuantity;
+                        return;
+                    }
+
+                    quantityInput.value = safeQuantity;
+                    const items = window.cartUtils.updateItemQuantity(item.id, item.size, item.color, safeQuantity);
+                    item.quantity = safeQuantity;
+                    priceEl.textContent = window.cartUtils.formatCurrency(item.unitPrice * item.quantity);
+                    updateSummary(items);
+                }
+
+                decrementBtn.addEventListener('click', () => {
+                    refresh(Number(quantityInput.value) - 1);
+                });
+
+                incrementBtn.addEventListener('click', () => {
+                    refresh(Number(quantityInput.value) + 1);
+                });
+
+                quantityInput.addEventListener('change', () => {
+                    refresh(quantityInput.value);
+                });
+
+                removeBtn.addEventListener('click', () => {
+                    window.cartUtils.removeItem(item.id, item.size, item.color);
+                    renderCart();
+                });
+            }
+
+            function renderCart() {
+                const items = window.cartUtils.getCartItems();
+                if (cartList) {
+                    cartList.innerHTML = '';
+
+                    if (items.length === 0) {
+                        if (cartEmptyState) {
+                            cartEmptyState.hidden = false;
+                        }
+                    } else {
+                        if (cartEmptyState) {
+                            cartEmptyState.hidden = true;
+                        }
+
+                        items.forEach((item) => {
+                            const element = createCartItemElement(item);
+                            cartList.appendChild(element);
+                        });
+                    }
+                }
+
+                updateSummary(items);
+            }
+
+            renderCart();
+        });
+    </script>
+</body>
+</html>

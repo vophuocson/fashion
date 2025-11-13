@@ -24,15 +24,15 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <button type="button" class="action-btn" aria-label="Tài khoản">
+                <a href="login.html" class="action-btn" aria-label="Tài khoản">
                     <span>Account</span>
-                </button>
+                </a>
                 <button type="button" class="action-btn" aria-label="Tìm kiếm">
                     <span>Search</span>
                 </button>
-                <button type="button" class="action-btn" aria-label="Giỏ hàng">
+                <a href="cart.html" class="action-btn" aria-label="Giỏ hàng">
                     <span>Cart</span>
-                </button>
+                </a>
             </div>
         </div>
     </header>
@@ -113,7 +113,8 @@
                         <input type="number" min="1" value="1" aria-label="Số lượng sản phẩm" />
                         <button type="button" aria-label="Tăng số lượng">+</button>
                     </div>
-                    <button type="button" class="add-to-cart">Thêm vào giỏ hàng</button>
+                    <button type="button" class="add-to-cart" data-product-id="FA-CK2025">Thêm vào giỏ hàng</button>
+                    <p class="add-to-cart-message" role="status" aria-live="polite"></p>
                 </div>
             </div>
         </section>
@@ -141,5 +142,98 @@
         </div>
         <p class="footer-note">© 2025 Fashion Avenue. All rights reserved.</p>
     </footer>
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (!window.cartUtils) {
+                return;
+            }
+
+            const sizeButtons = document.querySelectorAll('.option-chip');
+            const colorButtons = document.querySelectorAll('.color-swatch');
+            const quantityControl = document.querySelector('.detail-purchase .quantity-control');
+            const quantityInput = quantityControl ? quantityControl.querySelector('input') : null;
+            const decrementBtn = quantityControl ? quantityControl.querySelector('button:first-of-type') : null;
+            const incrementBtn = quantityControl ? quantityControl.querySelector('button:last-of-type') : null;
+            const addToCartButton = document.querySelector('.add-to-cart');
+            const feedback = document.querySelector('.add-to-cart-message');
+
+            if (!quantityControl || !quantityInput || !decrementBtn || !incrementBtn || !addToCartButton) {
+                return;
+            }
+
+            function setActiveState(buttons, activeButton) {
+                buttons.forEach((btn) => {
+                    const isActive = btn === activeButton;
+                    btn.classList.toggle('is-active', isActive);
+                    btn.setAttribute('aria-pressed', isActive);
+                });
+            }
+
+            sizeButtons.forEach((button) => {
+                button.addEventListener('click', () => setActiveState(sizeButtons, button));
+            });
+
+            colorButtons.forEach((button) => {
+                button.addEventListener('click', () => setActiveState(colorButtons, button));
+            });
+
+            function clampQuantity(value) {
+                return Math.max(1, Number.parseInt(value, 10) || 1);
+            }
+
+            decrementBtn.addEventListener('click', () => {
+                quantityInput.value = clampQuantity(Number(quantityInput.value) - 1);
+            });
+
+            incrementBtn.addEventListener('click', () => {
+                quantityInput.value = clampQuantity(Number(quantityInput.value) + 1);
+            });
+
+            quantityInput.addEventListener('change', () => {
+                quantityInput.value = clampQuantity(quantityInput.value);
+            });
+
+            function parsePrice(text) {
+                const numeric = text.replace(/[^0-9]/g, '');
+                return Number.parseInt(numeric, 10) || 0;
+            }
+
+            addToCartButton.addEventListener('click', () => {
+                const nameElement = document.querySelector('.detail-header h1');
+                const productName = nameElement ? nameElement.textContent.trim() : 'Sản phẩm';
+                const productId = addToCartButton.dataset.productId || productName;
+                const skuElement = document.querySelector('.detail-sku');
+                const skuText = skuElement ? skuElement.textContent : '';
+                const skuMatch = skuText.split(':').pop();
+                const sku = skuMatch ? skuMatch.trim() : productId;
+                const activeSize = document.querySelector('.option-chip.is-active');
+                const size = activeSize ? activeSize.textContent.trim() : 'Freesize';
+                const activeColor = document.querySelector('.color-swatch.is-active');
+                const color = activeColor ? (activeColor.getAttribute('aria-label') || '').trim() : 'Không xác định';
+                const quantity = clampQuantity(quantityInput.value);
+                const priceElement = document.querySelector('.price-current');
+                const unitPrice = priceElement ? parsePrice(priceElement.textContent) : 0;
+
+                const item = {
+                    id: sku,
+                    name: productName,
+                    size,
+                    color,
+                    quantity,
+                    unitPrice,
+                    url: window.location.pathname
+                };
+
+                const updated = window.cartUtils.addItemToCart(item);
+                quantityInput.value = 1;
+
+                if (feedback) {
+                    const totals = window.cartUtils.getCartTotals(updated);
+                    feedback.textContent = `Đã thêm ${quantity} sản phẩm vào giỏ hàng (tổng ${totals.itemCount}).`;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
