@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionista Boutique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo" aria-label="Fashionista Boutique">
+                <span>Fashionista</span>
+            </div>
+            <nav class="primary-nav" aria-label="Primary">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="sr-only">Mở menu</span>
+                </button>
+                <ul id="navMenu">
+                    <li><a href="#">Nữ</a></li>
+                    <li><a href="#">Nam</a></li>
+                    <li><a href="#">Trẻ em</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                    <li><a href="#">Giảm giá</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <form class="search-form" role="search">
+                    <label for="searchInput" class="sr-only">Tìm kiếm</label>
+                    <input id="searchInput" type="search" name="search" placeholder="Tìm sản phẩm...">
+                    <button type="submit">Tìm</button>
+                </form>
+                <a href="#" class="account-link" aria-label="Tài khoản">
+                    <span class="icon">👤</span>
+                    <span class="text">Tài khoản</span>
+                </a>
+                <a href="#" class="cart-link" aria-label="Giỏ hàng">
+                    <span class="icon">🛒</span>
+                    <span class="text">Giỏ hàng</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Khám phá phong cách của bạn</h1>
+                <p>Tận hưởng bộ sưu tập thời trang đa dạng với ưu đãi độc quyền mỗi ngày.</p>
+            </div>
+        </section>
+
+        <section class="product-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Sản phẩm nổi bật</h2>
+                    <p>Lựa chọn được cập nhật hàng tuần với nhiều khuyến mãi hấp dẫn.</p>
+                </header>
+                <div id="productGrid" class="product-grid" aria-live="polite"></div>
+                <nav class="pagination" aria-label="Pagination">
+                    <button id="prevPage" class="pagination-btn" aria-label="Trang trước">&laquo;</button>
+                    <div id="paginationNumbers" class="pagination-numbers"></div>
+                    <button id="nextPage" class="pagination-btn" aria-label="Trang sau">&raquo;</button>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div>
+                <h3>Fashionista Boutique</h3>
+                <p>Kiến tạo phong cách thời trang hiện đại và cá tính.</p>
+            </div>
+            <div>
+                <h4>Liên hệ</h4>
+                <ul>
+                    <li>Hotline: <a href="tel:19001234">1900 1234</a></li>
+                    <li>Email: <a href="mailto:hello@fashionista.vn">hello@fashionista.vn</a></li>
+                    <li>Địa chỉ: 123 Nguyễn Huệ, Quận 1, TP.HCM</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Kết nối với chúng tôi</h4>
+                <p>Theo dõi Fashionista trên các nền tảng mạng xã hội để cập nhật xu hướng mới nhất.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Fashionista Boutique. Giữ toàn bộ bản quyền.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

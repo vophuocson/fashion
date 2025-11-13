@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - Fashionista Boutique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo" aria-label="Fashionista Boutique">
+                <span>Fashionista</span>
+            </div>
+            <nav class="primary-nav" aria-label="Primary">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="sr-only">Mở menu</span>
+                </button>
+                <ul id="navMenu">
+                    <li><a href="index.html">Nữ</a></li>
+                    <li><a href="index.html">Nam</a></li>
+                    <li><a href="index.html">Trẻ em</a></li>
+                    <li><a href="index.html">Phụ kiện</a></li>
+                    <li><a href="index.html">Giảm giá</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <form class="search-form" role="search">
+                    <label for="searchInput" class="sr-only">Tìm kiếm</label>
+                    <input id="searchInput" type="search" name="search" placeholder="Tìm sản phẩm...">
+                    <button type="submit">Tìm</button>
+                </form>
+                <a href="#" class="account-link" aria-label="Tài khoản">
+                    <span class="icon">👤</span>
+                    <span class="text">Tài khoản</span>
+                </a>
+                <a href="#" class="cart-link" aria-label="Giỏ hàng">
+                    <span class="icon">🛒</span>
+                    <span class="text">Giỏ hàng</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="index.html">Bộ sưu tập Nữ</a></li>
+                    <li aria-current="page">Đầm lụa midi</li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="product-detail">
+            <div class="container product-detail-container">
+                <div class="product-gallery">
+                    <div class="product-thumbnails" role="tablist" aria-label="Chọn hình sản phẩm">
+                        <button class="product-thumbnail is-active" data-gallery-thumb data-image-src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" data-image-alt="Đầm lụa midi màu hồng" role="tab" aria-selected="true">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=200&q=80" alt="Đầm lụa midi nhìn từ phía trước">
+                        </button>
+                        <button class="product-thumbnail" data-gallery-thumb data-image-src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80" data-image-alt="Đầm lụa midi chi tiết chất liệu" role="tab" aria-selected="false">
+                            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=200&q=80" alt="Cận cảnh chất liệu đầm lụa">
+                        </button>
+                        <button class="product-thumbnail" data-gallery-thumb data-image-src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" data-image-alt="Đầm lụa midi phối phụ kiện" role="tab" aria-selected="false">
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Đầm lụa midi khi phối cùng phụ kiện">
+                        </button>
+                    </div>
+                    <div class="product-main-image" role="tabpanel">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Đầm lụa midi màu hồng" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="product-information">
+                    <header class="product-heading">
+                        <span class="product-collection">Bộ sưu tập Xuân 2024</span>
+                        <h1>Đầm lụa midi dáng A</h1>
+                        <div class="product-pricing detail-pricing">
+                            <span class="product-price">990.000₫</span>
+                            <span class="product-original-price">1.290.000₫</span>
+                            <span class="product-discount">Tiết kiệm 23%</span>
+                        </div>
+                    </header>
+
+                    <div class="product-meta">
+                        <p class="product-summary">Phom dáng nữ tính với chất liệu lụa satin mềm mịn, giúp tôn lên đường cong và mang đến cảm giác thoải mái cả ngày dài.</p>
+
+                        <section class="detail-section">
+                            <h2>Ưu đãi hiện có</h2>
+                            <ul>
+                                <li>Tặng kèm gói bọc quà cao cấp.</li>
+                                <li>Freeship đơn hàng từ 699.000₫.</li>
+                                <li>Hoàn tiền 5% với thành viên Fashionista Club.</li>
+                            </ul>
+                        </section>
+
+                        <section class="detail-section">
+                            <h2>Chọn kích thước</h2>
+                            <div class="option-group" role="radiogroup" aria-label="Chọn kích thước">
+                                <button type="button" class="option-chip is-selected" data-size-option aria-pressed="true">XS</button>
+                                <button type="button" class="option-chip" data-size-option aria-pressed="false">S</button>
+                                <button type="button" class="option-chip" data-size-option aria-pressed="false">M</button>
+                                <button type="button" class="option-chip" data-size-option aria-pressed="false">L</button>
+                            </div>
+                        </section>
+
+                        <section class="detail-section">
+                            <h2>Màu sắc</h2>
+                            <div class="option-group" role="radiogroup" aria-label="Chọn màu sắc">
+                                <button type="button" class="option-chip color-chip is-selected" data-color-option data-color="rose" aria-pressed="true">
+                                    <span aria-hidden="true"></span>
+                                    Hồng phấn
+                                </button>
+                                <button type="button" class="option-chip color-chip" data-color-option data-color="black" aria-pressed="false">
+                                    <span aria-hidden="true"></span>
+                                    Đen tuyền
+                                </button>
+                                <button type="button" class="option-chip color-chip" data-color-option data-color="mint" aria-pressed="false">
+                                    <span aria-hidden="true"></span>
+                                    Xanh mint
+                                </button>
+                            </div>
+                        </section>
+
+                        <section class="detail-section">
+                            <h2>Số lượng</h2>
+                            <div class="quantity-selector">
+                                <button type="button" aria-label="Giảm số lượng" data-quantity-decrease>-</button>
+                                <input type="number" value="1" min="1" aria-label="Số lượng sản phẩm" data-quantity-input>
+                                <button type="button" aria-label="Tăng số lượng" data-quantity-increase>+</button>
+                            </div>
+                        </section>
+
+                        <section class="detail-section">
+                            <h2>Cam kết &amp; giao hàng</h2>
+                            <ul>
+                                <li>Giao hàng nội thành trong 2 giờ.</li>
+                                <li>Đổi trả miễn phí trong vòng 15 ngày.</li>
+                                <li>Tư vấn stylist riêng 24/7.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="purchase-actions">
+                        <button type="button" class="btn-primary">Thêm vào giỏ hàng</button>
+                        <button type="button" class="btn-secondary">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-description">
+            <div class="container">
+                <h2>Mô tả sản phẩm</h2>
+                <p>Đầm lụa midi dáng A được thiết kế dành cho những quý cô yêu thích sự nhẹ nhàng và tinh tế. Chất liệu lụa satin nhập khẩu giúp tạo hiệu ứng bắt sáng, tôn lên vẻ sang trọng nhưng vẫn đảm bảo độ thoáng mát và dễ chịu. Phần eo bo nhẹ kết hợp chân váy xòe nhẹ, giúp che khuyết điểm và tạo cảm giác cân đối cho mọi dáng người.</p>
+                <p>Sản phẩm phù hợp để diện trong các buổi tiệc nhẹ, sự kiện trang trọng hoặc đơn giản là một buổi hẹn cà phê cuối tuần. Dễ dàng phối cùng blazer, cardigan hoặc phụ kiện ánh kim để tạo điểm nhấn.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div>
+                <h3>Fashionista Boutique</h3>
+                <p>Kiến tạo phong cách thời trang hiện đại và cá tính.</p>
+            </div>
+            <div>
+                <h4>Liên hệ</h4>
+                <ul>
+                    <li>Hotline: <a href="tel:19001234">1900 1234</a></li>
+                    <li>Email: <a href="mailto:hello@fashionista.vn">hello@fashionista.vn</a></li>
+                    <li>Địa chỉ: 123 Nguyễn Huệ, Quận 1, TP.HCM</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Kết nối với chúng tôi</h4>
+                <p>Theo dõi Fashionista trên các nền tảng mạng xã hội để cập nhật xu hướng mới nhất.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Fashionista Boutique. Giữ toàn bộ bản quyền.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
