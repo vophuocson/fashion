@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm - Áo khoác dáng dài | Fashion Avenue</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo" aria-label="Fashion Avenue logo">Fashion Avenue</div>
+            <nav class="site-nav" aria-label="Danh mục sản phẩm">
+                <ul>
+                    <li><a href="index.html">New Arrivals</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button type="button" class="action-btn" aria-label="Tài khoản">
+                    <span>Account</span>
+                </button>
+                <button type="button" class="action-btn" aria-label="Tìm kiếm">
+                    <span>Search</span>
+                </button>
+                <button type="button" class="action-btn" aria-label="Giỏ hàng">
+                    <span>Cart</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <section class="product-detail" aria-labelledby="detail-heading">
+            <div class="detail-gallery" aria-label="Bộ sưu tập hình ảnh sản phẩm">
+                <ul class="detail-thumbnails" aria-label="Chọn ảnh hiển thị">
+                    <li>
+                        <button type="button" class="thumbnail-btn is-active">
+                            <span class="sr-only">Ảnh sản phẩm góc chính</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="thumbnail-btn">
+                            <span class="sr-only">Ảnh sản phẩm góc nghiêng</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="thumbnail-btn">
+                            <span class="sr-only">Ảnh chi tiết chất liệu</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="thumbnail-btn">
+                            <span class="sr-only">Ảnh mặt sau sản phẩm</span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="detail-image" role="img" aria-label="Áo khoác dáng dài màu be"></div>
+            </div>
+
+            <div class="detail-info">
+                <header class="detail-header">
+                    <p class="detail-sku">Mã sản phẩm: FA-CK2025</p>
+                    <h1 id="detail-heading">Áo khoác dáng dài cổ vest</h1>
+                    <p class="detail-subtitle">Thiết kế tối giản, chất liệu cao cấp giữ ấm nhẹ nhàng cho những ngày se lạnh.</p>
+                </header>
+
+                <div class="detail-pricing" aria-label="Thông tin giá">
+                    <span class="price-current">1.299.000₫</span>
+                    <span class="price-original">1.599.000₫</span>
+                    <span class="price-saving">Tiết kiệm 300.000₫</span>
+                </div>
+
+                <section class="detail-promotion" aria-label="Khuyến mãi">
+                    <h2>Ưu đãi hiện hành</h2>
+                    <ul>
+                        <li>Tặng kèm khăn choàng len khi mua trong tuần lễ thời trang.</li>
+                        <li>Miễn phí giao hàng toàn quốc cho đơn từ 999.000₫.</li>
+                        <li>Đổi trả trong vòng 30 ngày nếu sản phẩm còn nguyên tem mác.</li>
+                    </ul>
+                </section>
+
+                <section class="detail-options" aria-label="Lựa chọn sản phẩm">
+                    <div class="option-group" role="group" aria-labelledby="size-label">
+                        <div id="size-label" class="option-label">Kích thước</div>
+                        <div class="option-list">
+                            <button type="button" class="option-chip is-active" aria-pressed="true">S</button>
+                            <button type="button" class="option-chip">M</button>
+                            <button type="button" class="option-chip">L</button>
+                            <button type="button" class="option-chip">XL</button>
+                        </div>
+                    </div>
+                    <div class="option-group" role="group" aria-labelledby="color-label">
+                        <div id="color-label" class="option-label">Màu sắc</div>
+                        <div class="color-list" role="list">
+                            <button type="button" class="color-swatch is-active" style="--swatch-color: #d9c3a1;" aria-label="Màu be" aria-pressed="true"></button>
+                            <button type="button" class="color-swatch" style="--swatch-color: #1a1a1a;" aria-label="Màu đen"></button>
+                            <button type="button" class="color-swatch" style="--swatch-color: #afc3d7;" aria-label="Màu xanh nhạt"></button>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="detail-purchase" aria-label="Thao tác mua hàng">
+                    <div class="quantity-control" aria-label="Chọn số lượng">
+                        <button type="button" aria-label="Giảm số lượng">−</button>
+                        <input type="number" min="1" value="1" aria-label="Số lượng sản phẩm" />
+                        <button type="button" aria-label="Tăng số lượng">+</button>
+                    </div>
+                    <button type="button" class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-description" aria-labelledby="description-heading">
+            <h2 id="description-heading">Mô tả sản phẩm</h2>
+            <p>
+                Áo khoác dáng dài cổ vest của Fashion Avenue được may từ chất liệu len pha cashmere mềm mại,
+                mang lại cảm giác ấm áp nhưng vẫn nhẹ nhàng khi di chuyển. Thiết kế tối giản với gam màu trung
+                tính dễ dàng phối hợp cùng nhiều trang phục khác nhau, phù hợp cho cả đi làm lẫn dạo phố.
+            </p>
+            <p>
+                Các đường may tỉ mỉ, phần đai chỉnh eo linh hoạt giúp tôn dáng và giữ phom áo luôn chuẩn. Sản phẩm
+                có 4 lựa chọn kích thước cùng 3 phiên bản màu sắc thời thượng, đáp ứng mọi phong cách cá nhân của bạn.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>Fashion Avenue Co., Ltd</h2>
+            <p>Số điện thoại: <a href="tel:+84123456789">+84 123 456 789</a></p>
+            <p>Địa chỉ: 123 Đường Thời Trang, Quận 1, TP. Hồ Chí Minh</p>
+            <p>Email: <a href="mailto:contact@fashionavenue.vn">contact@fashionavenue.vn</a></p>
+        </div>
+        <p class="footer-note">© 2025 Fashion Avenue. All rights reserved.</p>
+    </footer>
+</body>
+</html>
